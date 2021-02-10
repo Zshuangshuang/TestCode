@@ -1,3 +1,5 @@
+package com.zss.单链表基础;
+
 class Node{
     private int data;
     private Node next;
@@ -32,12 +34,12 @@ public class MyLinkedList {
     //头插法
     public void addFirst(int data){
         Node node = new Node(data);
-        if (head == null){
+        if (this.head == null){
             this.head = node;
             return;
         }
-        node.setNext(head);
-        head = node;
+        node.setNext(this.head);
+       this. head = node;
     }
     //尾插法
     public void addLast(int data){
@@ -118,6 +120,9 @@ public class MyLinkedList {
        return null;
     }
     public void remove(int data){
+        if(this.head == null){
+            return;
+        }
         if (this.head.getData() == data){
             this.head = this.head.getNext();
             return;
@@ -131,7 +136,7 @@ public class MyLinkedList {
         prev.setNext(toDel.getNext());
     }
     public void clear(){
-
+        this.head = null;
     }
     public static void main(String[] args) {
         MyLinkedList linkedList = new MyLinkedList();
@@ -149,6 +154,8 @@ public class MyLinkedList {
         System.out.println();
         linkedList.remove(30);
         linkedList.display();
-
+        linkedList.clear();
+        System.out.println("======");
+        System.out.println();
     }
 }

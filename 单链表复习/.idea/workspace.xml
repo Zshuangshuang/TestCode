@@ -15,7 +15,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -42,7 +42,7 @@
   </component>
   <component name="RunManager">
     <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyLinkedList" />
+      <option name="MAIN_CLASS_NAME" value="com.zss.单链表基础.MyLinkedList" />
       <module name="单链表复习" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -65,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612748668080</updated>
       <workItem from="1612748676971" duration="3745000" />
+      <workItem from="1612923060903" duration="13984000" />
     </task>
     <servers />
   </component>
@@ -72,25 +73,25 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1612750821286">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1612924220391">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1612750821286" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1612799559166">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1612924220391" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1612946941137">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1612799559166" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1612799559166">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1612946941137" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1612946941137">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1612799559166" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1612799559166">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1612946941137" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1612946941137">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1612799559166" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1612799559166">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1612946941137" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1612946941137">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1612799559166" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1612946941137" />
   </component>
 </project>
