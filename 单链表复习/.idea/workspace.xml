@@ -66,6 +66,8 @@
       <updated>1612748668080</updated>
       <workItem from="1612748676971" duration="3745000" />
       <workItem from="1612923060903" duration="13984000" />
+      <workItem from="1613179144404" duration="9757000" />
+      <workItem from="1613197873597" duration="613000" />
     </task>
     <servers />
   </component>
@@ -93,5 +95,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1612946941137" />
+    <state x="28" y="0" key="new project wizard" timestamp="1613198625902">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="28" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1613198625902" />
   </component>
 </project>
