@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.zss.dao.UserMapper">
+    <!--id绑定对应的方法名称-->
+    <resultMap id="UserMap" type="hello">
+        <!--column代表数据库中的字段，property实体类中的字段-->
+        <result column="password" property="pwd"/>
+    </resultMap>
+    <select id="findById" resultMap="UserMap">
+        select * from user where id=#{id};
+    </select>
+</mapper>
