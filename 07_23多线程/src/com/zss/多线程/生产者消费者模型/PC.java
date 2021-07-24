@@ -8,6 +8,7 @@ class Chicken{
     }
 }
 class Producer extends Thread{
+
     SYNPool synPool;
     public Producer(SYNPool synPool){
         this.synPool = synPool;
