@@ -1,43 +1,38 @@
 package com.zss.算法题.字符串的排列;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-import java.util.*;
 public class Solution {
     public ArrayList<String> Permutation(String str) {
-        ArrayList<String> res = new ArrayList<>();
-        //如果当前给定字符串为null
-        if(str == null || str.length() == 0){
-            return res;
+        ArrayList<String> result = new ArrayList<>();
+        if (str == null || str.length() == 0){
+            return result;
         }
-        //将结果集作为参数
-        helper(res,0,str.toCharArray());
-        //符合字典序输出
-        Collections.sort(res);
-        return res;
+        PermutationHelper(result,0,str.toCharArray());
+        Collections.sort(result);
+        return result;
     }
 
-    public void helper(ArrayList<String> res,int index,char[] s){
-        if(index == s.length - 1){
-            res.add(String.valueOf(s));
-            return;
-        }
-
-        for(int i = index;i < s.length;i++){
-            if(i == index || s[index] != s[i]){
-                swap(s,index,i);
-                helper(res,index + 1,s);
-                swap(s,index,i);
+    private void PermutationHelper(ArrayList<String> result, int i, char[] chars) {
+        if (i == chars.length-1){
+            String ret = String.valueOf(chars);
+            if (!result.contains(ret)){
+                result.add(ret);
+            }
+        }else {
+            for (int j = i; j < chars.length; j++) {
+                swap(chars,i,j);
+                PermutationHelper(result, i+1, chars);
+                //将数组复原，避免对下次递归造成影响
+                swap(chars,i,j);
             }
         }
-
-
     }
 
-    public void swap(char[] c,int a,int b){
-        char temp = c[a];
-        c[a] = c[b];
-        c[b] = temp;
+    private void swap(char[] chars, int i, int j) {
+        char tmp = chars[i];
+        chars[i] = chars[j];
+        chars[j] = tmp;
     }
-
 }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>
+        JSP中的对象
+    </p>
+    <p id="demo"></p>
+    <script>
+        var person ={
+            lastName : "肖",
+            firstName : "一凡",
+            address : "咸阳",
+            completeName : function () {
+                return this.lastName+this.firstName;
+            }
+        }
+        document.getElementById("demo").innerHTML="对象全名为："+person.completeName();
+    </script>
+
+</body>
+</html>
