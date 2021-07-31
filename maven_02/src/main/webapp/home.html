@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="js/jquery@3.3.1/jquery.js"></script>
+    <script>
+        $(function () {//页面加载完开始执行
+            $("#loginBtn").click(function () {//按钮绑定点击事件
+                $.ajax({
+                    type: "post",
+                    url: "loginJson",
+                    dataType: "json",//响应体中的数据格式
+                    data: {//请求数据
+                        username: $("#username").val(),
+                        password: $("#password").val(),
+                    },
+                    success(r){
+                        if(r.success){
+                            $("#distinct").hide();
+                        }else{
+                            alert("用户名密码输入错误")
+                        }
+                    }
+                })
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <div id="distinct">
+        用户名 <input id="username" type="text" name="username" placeholder="请输入用户名">
+        <br/>
+        密  码 <input id="password" type="password" name="password"  placeholder="请输入密码">
+        <br/>
+        <input id="loginBtn" type="button" value="登录">
+    </div>
+    <p>文章1</p>
+    <p>文章2</p>
+    <p>文章3</p>
+
+</body>
+</html>
