@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <script type="text/javascript" src="../static/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+</head>
+<body>
+<div id="login-box">
+    <h1>Login</h1>
+    <!--当前需要访问的是/login，但是是在view的上一级,需要加上../-->
+ <form action="../login" id="login_form">
+     <div class="form">
+         <div class="item">
+             <i class="fa fa-user" aria-hidden="true"></i>
+             <input id="usename" type="text" name="username" placeholder="Username">
+         </div>
+         <div class="item">
+             <i class="fa fa-key" aria-hidden="true"></i>
+             <input id="password" type="password"name="password" placeholder="Password">
+         </div>
+     </div>
+     <br>
+     <input type="submit" value="提交">
+ </form>
+</div>
+</body>
+</html>
