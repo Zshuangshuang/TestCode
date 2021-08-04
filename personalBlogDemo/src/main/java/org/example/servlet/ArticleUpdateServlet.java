@@ -3,17 +3,15 @@ package org.example.servlet;
 
 import org.example.dao.ArticleDao;
 import org.example.model.Article;
-import org.example.model.User;
 import org.example.util.JSONUtil;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.InputStream;
 
-@WebServlet("/articleUpdate")
+@WebServlet("/articleDetail")
 public class ArticleUpdateServlet extends AbstractBaseServlet{
     @Override
     protected Object process(HttpServletRequest req, HttpServletResponse resp) throws IOException {

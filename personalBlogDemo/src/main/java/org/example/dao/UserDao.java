@@ -27,6 +27,7 @@ public class UserDao {
             statement = connection.prepareStatement(sql);
             statement.setString(1,username);
             resultSet = statement.executeQuery();
+            System.out.println(statement);
             while (resultSet.next()){
                 user = new User();
                 user.setId(resultSet.getInt("id"));
@@ -46,11 +47,11 @@ public class UserDao {
         PreparedStatement statement = null;
         try {
             connection = DBUtil.getConnection();
-            String sql = "insert into user(username,password) values (?,?)";
+            String sql = "insert into user (username,password) values (?,?)";
             statement = connection.prepareStatement(sql);
             statement.setString(1,userRegister.getUsername());
             statement.setString(2,userRegister.getPassword());
-            System.out.println(sql);
+            statement.executeUpdate();
         }catch (Exception e){
             throw new AppException("User002","添加用户失败",e);
         }finally {

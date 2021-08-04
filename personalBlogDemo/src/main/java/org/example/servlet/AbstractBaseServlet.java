@@ -31,7 +31,6 @@ public abstract class AbstractBaseServlet extends HttpServlet {
         //服务端也返回application/json
         resp.setContentType("application/json");
 
-        //TODO：session校验，除登录注册外其他功能都需要在登录状态下进行操作
         //使用req.getServletPath()获取请求路径
         JSONResponse json = new JSONResponse();
         try {

@@ -11,22 +11,32 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBUtil {
-    private static final String URL = "jdbc:mysql://localhost:3306/servlet_blog?user=root&password=261919Zss&character=utf-8&useSSL=false";
-    //创建连接池对象，提高效率；避免每次都要创建和释放数据库操作对象
-    private static final DataSource DS = new MysqlDataSource();
-    static {
-        ((MysqlDataSource) DS).setURL(URL);
+    private static String url = "jdbc:mysql://localhost:3306/servlet_blog?characterEncoding=utf-8&useSSL=false";
+    private static String username = "root";
+    private static String password = "261919Zss";
+    private static volatile DataSource dataSource;
+    private static DataSource getDataSource(){
+        if (dataSource == null){
+            synchronized (DBUtil.class){
+                if (dataSource == null){
+                    dataSource = new MysqlDataSource();
+                    ((MysqlDataSource)dataSource).setURL(url);
+                    ((MysqlDataSource)dataSource).setUser(username);
+                    ((MysqlDataSource)dataSource).setPassword(password);
+                }
+            }
+        }
+        return dataSource;
     }
     //获取Connection对象
     public static Connection getConnection(){
         try {
-            return DS.getConnection();
+            return getDataSource().getConnection();
         } catch (SQLException e) {
             //返回自定义异常
-           throw new AppException("DBError001","数据库连接异常",e);
+            throw new AppException("DBError001","数据库连接异常",e);
         }
     }
-
 
     public static void close(Connection connection, PreparedStatement statement, ResultSet resultSet){
         try {
